@@ -1,0 +1,189 @@
+@import url(/vendor/fonts/fonts.css);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page {
+  min-width: 320px;
+  max-width: 1920px;
+  background-color: #000000;
+  color: white;
+  margin: 0 auto;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.page__content {
+  max-width: 882px;
+  margin: 0 auto;
+}
+
+.header {
+  border: 1px solid rgba(84, 84, 84, 0.7);
+  min-height: 74px;
+  align-items: flex-start;
+}
+
+.header__logo {
+  background-image: url(./images/mesto_logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 142px;
+  height: 33px;
+}
+
+.content {
+  border: 1px solid purple;
+}
+
+.profile {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  min-height: 120px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.profile__box{
+
+  display: flex;
+  
+
+}
+
+.profile__avatar {
+  max-width: 100%;
+  max-height: 120px;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+
+.profile__text-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) min-content;
+  gap: 16px 17px;
+  margin: 0;
+  align-content: center;
+  border: 1px solid red;
+  
+}
+
+.profile__name {
+  border: 1px solid red;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 56px;
+  margin: 0;
+}
+
+.profile__edit-button {
+  border: 1px solid white;
+  background-color: black;
+  background-image: url(./images/pencil_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 24px;
+  min-height: 24px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.profile__description {
+  border: 1px solid red;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin:0;
+}
+
+.profile__add-button {
+  border: 1px solid white;
+  background-color: black;
+  background-image: url(./images/plus_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  min-width: 150px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.grid {
+  border: 1px solid yellow;
+  max-width: 882px;
+}
+
+.grid__template {
+  border: 1px solid PURPLE;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 18px;
+  list-style: none;
+  padding: 0;
+  
+}
+
+.grid__item {
+  border: 1px solid yellow;
+  border-radius: 10px;
+  
+}
+
+.grid__image {
+  max-width: 100%;
+  max-height: 282px;
+}
+
+.grid__text-container {
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+
+  padding: 25px 15px 31px 21px;
+}
+
+
+.grid__text {
+  border: 1px solid green;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  
+}
+
+.grid__like-btn {
+  border: none;
+  background-color: white;
+  background-image: url(./images/heart_logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 20px;
+  max-height: 20px;
+}
+
+.footer {
+  border: 1px solid blue;
+}
+
+.footer__copyright {
+  border: 1px solid blueviolet;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+}

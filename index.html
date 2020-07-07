@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Mesto</title>
 </head>
-<body>
+<body class="body">
     <div class="page">
         <div class="page__content">
           <header class="header">
@@ -73,9 +73,16 @@
           </main>
           <footer class="footer">
             <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-
           </footer> 
         </div>
+        <div class="popup">
+          <form class="popup__container">
+          <button class="close__btn"></button>
+          <p class="popup__header">Редактировать профиль</p>
+          <input type="text" class="popup__name popup__text" placeholder="Имя">
+          <input type="text" class="popup__description popup__text" placeholder="Описание">
+          <button class="popup__button">Сохранить</button>
+        </form>
       </div>
 </body>
 </html>

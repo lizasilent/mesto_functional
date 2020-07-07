@@ -6,12 +6,15 @@
   box-sizing: border-box;
 }
 
+.body {
+  margin: 0;
+}
+
 .page {
   min-width: 320px;
   max-width: 1920px;
   background-color: #000000;
   color: white;
-  margin: 0 auto;
   font-family: Inter, Arial, sans-serif;
 }
 
@@ -39,7 +42,6 @@
 }
 
 .profile {
-
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -132,13 +134,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  
 }
 
 .grid__item {
   border: 1px solid yellow;
   border-radius: 10px;
   overflow: hidden;
+  height: 362px;
 }
 
 .grid__image {
@@ -155,7 +157,6 @@
   padding: 25px 15px 31px 21px;
 }
 
-
 .grid__text {
   border: 1px solid green;
   font-style: normal;
@@ -167,8 +168,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
-  
-  
 }
 
 .grid__like-btn {
@@ -181,7 +180,93 @@
   max-height: 20px;
 }
 
+.popup {
+  background-color: rgba(0,0,0,0.5);
+  width:100%;
+  min-height: 100%;
+  overflow:hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popup__container {
+background-color: white;
+display:flex;
+flex-direction: column;
+justify-content: center;
+padding: 34px 36px 36px;
+max-width: 430px;
+min-height: 330px;
+border: 1px solid red;
+border-radius: 10px;
+}
+
+.close__btn {
+  position:relative;
+  align-self: flex-end;
+  margin-top: -110px;
+  margin-right: -70px;
+  border:0;
+  background-color: black;
+  background-image: url(./images/close_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 40px;
+  width: 40px;
+
+}
+
+.popup__header {
+position:relative;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 29px;
+color: #000000;
+/* margin-top: 30px; 
+margin-bottom:54px; */
+}
+
+.popup__text {
+border: 0;
+border-bottom: 1px solid gray;
+background-color: transparent;
+font-weight: normal;
+font-family: inherit;
+font-size: 14px;
+line-height: 17px;
+min-height: 27px;
+}
+
+.popup__name {
+margin-bottom: 29px;
+}
+
+.popup__description {
+margin-bottom: 48px;
+}
+
+.popup__button {
+min-height: 50px;
+background: #000000;
+border:none;
+border-radius: 2px;
+color: white;
+font-style: normal;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+}
+
+
 .footer {
+  position:relative;
   border: 1px solid blue;
 }
 

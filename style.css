@@ -69,7 +69,7 @@
   margin: 0;
   align-content: center;
   border: 1px solid red;
-  
+
 }
 
 .profile__name {
@@ -140,19 +140,19 @@
   border: 1px solid yellow;
   border-radius: 10px;
   overflow: hidden;
-  max-height: 362px;
+  /* max-height: 361px; */
 }
 
 .grid__image {
-  max-width: 100%;
-  min-height: 282px;
+  min-width: 100%;
+  max-height: 282px;
 }
 
 .grid__text-container {
   color: black;
   background-color: white;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: space-between;
   padding: 25px 15px 31px 21px;
   margin-top: -5px;
@@ -176,7 +176,7 @@
   background-color: white;
   background-image: url(./images/heart_logo.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: cover;
   min-width: 20px;
   max-height: 20px;
 }
@@ -287,23 +287,71 @@ text-align: center;
   margin: 0;
 }
 
-@media screen and (max-width: 470px) { 
 
+
+@media screen and (max-width: 999px) {
   .page__content {
     padding: 28px 19px 36px;
   }
+
+  .grid {
+    border: 1px solid yellow;
+    max-width: 100%;
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 770px) {
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 42px;
+    text-align: center;
+  }
+
+  .profile__add-button {
+    margin-top:36px;
+    min-width: 80%;
+    min-height: 50px;
+    cursor: pointer;
+  }
+
+  .grid {
+    padding: 30px 66px 30px;
+  }
+
+  .grid__template {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .grid__image {
+    max-width: 346px;
+    min-height: 282px;
+  }
+}
+
+@media screen and (max-width: 470px) {
 
   .header {
     min-height: 56px;
     margin: 0 -19px 0;
   }
-  
+
   .header__logo {
     margin-left: 19px;
     max-width: 103px;
     min-height: 24px;
-    
   }
+
   .profile {
     display: flex;
     flex-direction: column;
@@ -315,62 +363,55 @@ text-align: center;
     margin-right: 0;
     padding-bottom:14px;
   }
-  
+
   .profile__box{
     display: block;
     align-content: center;
-
   }
 
   .profile__text-content {
     grid-gap: 14px 1px;
     grid-template-columns: 201px 18px;
-
   }
-  
+
   .profile__name {
     font-weight: 500;
     font-size: 27px;
     line-height: 2;
   }
-  
+
   .profile__edit-button {
     min-width: 18px;
     min-height: 18px;
   }
-  
+
   .profile__description {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.2;
   }
-  
+
   .profile__add-button {
     margin-top:36px;
     min-width: 100%;
     min-height: 50px;
     cursor: pointer;
   }
-  
+
   .grid {
     border: 1px solid yellow;
     max-width: 100%;
     padding-top: 36px;
     padding-bottom: 48px;
   }
-  
 
   .grid__template {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(1, 1fr);
-    
   }
 
   .footer__copyright {
-    
     font-size: 14px;
     line-height: 1.2;
-    
   }
-
 }

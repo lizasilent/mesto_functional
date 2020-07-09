@@ -56,8 +56,7 @@
 }
 
 .profile__avatar {
-  max-width: 120px;
-  min-height: 120px;
+  width: 120px;
   border-radius: 50%;
   margin-right: 30px;
 }
@@ -329,7 +328,7 @@ text-align: center;
 
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 523px) {
 
   .header {
     min-height: 56px;

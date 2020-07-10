@@ -1,0 +1,14 @@
+.grid__like-btn {
+  border: none;
+  background-color: white;
+  background-image: url(../../../images/heart_logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 20px;
+  max-height: 20px;
+  cursor: pointer;
+}
+
+.grid__like-btn:hover {
+  opacity: 0.8;
+}

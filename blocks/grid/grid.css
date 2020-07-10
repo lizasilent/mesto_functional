@@ -1,0 +1,29 @@
+@import url(./__template/grid__template.css);
+@import url(./__item/grid__item.css);
+@import url(./__image/grid__image.css);
+@import url(./__text-container/grid__text-container.css);
+@import url(./__text/grid__text.css);
+@import url(./__like-btn/grid__like-btn.css);
+
+
+.grid {
+  max-width: 882px;
+  padding-top: 50px;
+  padding-bottom: 66px;
+}
+
+@media screen and (max-width: 999px) {
+  .grid {
+    max-width: 100%;
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 523px) {
+  .grid {
+    max-width: 100%;
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+}

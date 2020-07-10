@@ -1,0 +1,24 @@
+@import url(./__container/popup__container.css);
+@import url(./__close-btn/popup__close-btn.css);
+@import url(./__header/popup__header.css);
+@import url(./__name/popup__name.css);
+@import url(./__description/popup__description.css);
+@import url(./__text/popup__text.css);
+@import url(./__submit-btn/popup__submit-btn.css);
+@import url(./__is-open/popup__is-open.css);
+
+
+
+.popup {
+  background-color: rgba(0,0,0,0.5);
+  width:100%;
+  min-height: 100%;
+  overflow:hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

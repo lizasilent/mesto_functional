@@ -1,6 +1,6 @@
 let openModalButton = document.querySelector(".profile__edit-btn");
 let modal = document.querySelector(".popup");
-let closeModalButton = document.querySelector(".close__btn");
+let closeModalButton = document.querySelector(".popup__close-btn");
 let popup = modal.querySelector(".popup__container");
 let userName = document.querySelector(".profile__name");
 let userInformation = document.querySelector(".profile__description");
@@ -15,7 +15,7 @@ openModalButton.addEventListener("click", () => {
 closeModalButton.addEventListener('click', () => {
 
     modal.classList.remove("popup__is-open");
-    
+
 
 })
 

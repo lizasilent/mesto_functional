@@ -5,8 +5,6 @@
 @import url(./__description/popup__description.css);
 @import url(./__text/popup__text.css);
 @import url(./__submit-btn/popup__submit-btn.css);
-@import url(./__is-open/popup__is-open.css);
-
 
 
 .popup {

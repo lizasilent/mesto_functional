@@ -16,6 +16,8 @@ closeModalButton.addEventListener('click', () => {
 
     modal.classList.remove("popup__is-open");
 
+     inputName.value = userName.textContent
+     inputDescription.value = userInformation.textContent
 
 })
 

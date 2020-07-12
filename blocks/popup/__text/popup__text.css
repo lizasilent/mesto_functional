@@ -1,3 +1,6 @@
+@import url(./_name/popup__text_name.css);
+@import url(./_description/popup__text_description.css);
+
 .popup__text {
   border: 0;
   border-bottom: 1px solid gray;

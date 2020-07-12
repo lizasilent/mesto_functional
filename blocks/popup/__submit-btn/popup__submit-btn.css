@@ -9,3 +9,7 @@ font-size: 18px;
 line-height: 1.2;
 text-align: center;
 }
+
+.popup__submit-btn:hover {
+opacity: 0.8;
+}

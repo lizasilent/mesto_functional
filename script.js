@@ -9,12 +9,12 @@ let inputDescription = modal.querySelector(".popup__description");
 
 openModalButton.addEventListener("click", () => {
 
-    modal.classList.add("popup__is-open");
+    modal.classList.add("popup_is-open");
 })
 
 closeModalButton.addEventListener('click', () => {
 
-    modal.classList.remove("popup__is-open");
+    modal.classList.remove("popup_is-open");
 
      inputName.value = userName.textContent
      inputDescription.value = userInformation.textContent

@@ -6,7 +6,16 @@
   justify-content: center;
   padding: 34px 36px 36px;
   margin:0 auto;
-  min-width: 430px;
-  min-height: 330px;
+  width: 430px;
   border-radius: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 523px) {
+
+  .popup__container  {
+    max-width: 282px;
+    padding: 20px 30px 20px; 
+  }
+
 }

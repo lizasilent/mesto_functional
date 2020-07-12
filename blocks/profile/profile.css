@@ -24,6 +24,7 @@
     padding-top: 42px;
     text-align: center;
   }
+}
 
   @media screen and (max-width: 523px){
     .profile {

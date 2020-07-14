@@ -17,7 +17,7 @@ function closePopup () {
   modal.classList.remove("popup_is-open");
   }
 
-function saveInfo () {
+function saveInfo (event) {
   event.preventDefault();
   userName.textContent = inputName.value;
   userInformation.textContent = inputDescription.value;

@@ -29,3 +29,50 @@ closeModalButton.addEventListener('click', closePopup);
 popup.addEventListener("submit", saveInfo);
 
 
+const initialCards = [
+  {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
+const cardTemplate = document.querySelector(".template-card").content.querySelector(".grid__item");
+
+initialCards.forEach((data) => {
+  
+  const gridElement = cardTemplate.cloneNode(true);
+  const gridText = gridElement.querySelector(".grid__text");
+  const gridImage = gridElement.querySelector(".grid__image");
+  const gridLikeButton = gridElement.querySelector(".grid__like-btn");
+  const gridDeleteButton = gridElement.querySelector(".grid__delete-btn");
+
+  gridText.textContent = data.name;
+  gridImage.src = data.link;
+
+  const list = document.querySelector(".grid__template");
+  list.prepend(gridElement);
+
+
+
+})
+

@@ -1,6 +1,6 @@
 //Modals 
 
-let editProfileModal = document.querySelector(".popup");
+let editProfileModal = document.querySelector(".popup_type_edit-profile");
 let addCardsModal = document.querySelector(".popup_type_add-cards");
 let popup = editProfileModal.querySelector(".popup__container");
 
@@ -9,12 +9,18 @@ let userName = document.querySelector(".profile__name");
 let userInformation = document.querySelector(".profile__description");
 let inputName = editProfileModal.querySelector(".popup__text_name");
 let inputDescription = editProfileModal.querySelector(".popup__text_description");
+let inputPlace = addCardsModal.querySelector(".popup__text_place");
+let inputImageSource = addCardsModal.querySelector(".popup__source");
+let gridTitle = document.querySelector(".grid__text");
+let gridImage = document.querySelector(".grid__image");
 
 //Buttons
 let addCardButton = document.querySelector('.profile__add-btn');
 let likeCardButton = document.querySelector(".grid__like-btn");
 let editProfileButton = document.querySelector(".profile__edit-btn");
-let closeModalButton = document.querySelector(".popup__close-btn");
+let closeEditProfileModalButton = editProfileModal.querySelector(".popup__close-btn");
+let closeAddCardsModalModalButton = addCardsModal.querySelector(".popup__close-btn");
+
 
 
 
@@ -47,11 +53,22 @@ function saveInfo (event) {
   closePopup();
   }
 
+  function addCardSubmitHandler (event) {
+    event.preventDefault();
+    console.log(inputPlace.value);
+    console.log(inputImageSource.value);
+    renderCard({name: inputPlace.value, link:inputImageSource.value});
+    closePopup2();
+    }
+  
+
 editProfileButton.addEventListener("click", openPopup);
-closeModalButton.addEventListener('click', closePopup);
-popup.addEventListener("submit", saveInfo);
+closeEditProfileModalButton.addEventListener('click', closePopup);
 addCardButton.addEventListener("click", openPopup2);
-addCardsModal.addEventListener('click', closePopup2);
+closeAddCardsModalModalButton.addEventListener('click', closePopup2);
+popup.addEventListener("submit", saveInfo);
+
+addCardsModal.addEventListener("submit", addCardSubmitHandler);
 
 
 const initialCards = [
@@ -82,29 +99,39 @@ const initialCards = [
 ];
 
 const cardTemplate = document.querySelector(".template-card").content.querySelector(".grid__item");
+const list = document.querySelector(".grid__template");
 
-initialCards.forEach((data) => {
-  
+function createCard(data) {
   const gridElement = cardTemplate.cloneNode(true);
   const gridText = gridElement.querySelector(".grid__text");
   const gridImage = gridElement.querySelector(".grid__image");
-  const gridLikeButton = gridElement.querySelector(".grid__like-btn");
-  const gridDeleteButton = gridElement.querySelector(".grid__delete-btn");
+  
+  
+  gridText.textContent = data.name;
+  gridImage.src = data.link;
+
+  return gridElement;
+}
+
+function renderCard(data) {
+  list.prepend(createCard(data)); 
+}
+
+
+initialCards.forEach((data) => {
+  renderCard(data);
+})
+
+
+const gridLikeButton = gridElement.querySelector(".grid__like-btn");
+const gridDeleteButton = gridElement.querySelector(".grid__delete-btn");
+
 
   // gridLikeButton.addEventListener("click", handler);
   // gridDeleteButton.addEventListener("click", handler);
   // gridImage.addEventListener("click", handler);
 
-  gridText.textContent = data.name;
-  gridImage.src = data.link;
-
-  const list = document.querySelector(".grid__template");
-  list.prepend(gridElement);
-})
-
+  
 // likeCardButton.addEventListener("click", (event) => {
 //   event.target.classList.toggle("grid__like_active-btn")
 // });
-
-
-

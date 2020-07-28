@@ -1,9 +1,11 @@
 @import url(./__template/grid__template.css);
 @import url(./__item/grid__item.css);
+@import url(./__delete-btn/grid__delete-btn.css);
 @import url(./__image/grid__image.css);
 @import url(./__text-container/grid__text-container.css);
 @import url(./__text/grid__text.css);
 @import url(./__like-btn/grid__like-btn.css);
+@import url(./__like-btn/_active-btn/grid__like_active-btn.css);
 
 
 .grid {

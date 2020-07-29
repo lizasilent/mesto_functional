@@ -11,6 +11,7 @@
   min-height: 40px;
   width: 40px;
   cursor:pointer;
+  outline: none;
 }
 
 .popup__close-btn:hover {

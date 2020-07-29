@@ -5,6 +5,7 @@
 @import url(./__text-container/grid__text-container.css);
 @import url(./__text/grid__text.css);
 @import url(./__like-btn/grid__like-btn.css);
+@import url(./__like-btn/_active/grid__like-btn_active.css);
 
 
 .grid {

@@ -55,8 +55,6 @@ function saveInfo (event) {
 
   function addCardSubmitHandler (event) {
     event.preventDefault();
-    console.log(inputPlace.value);
-    console.log(inputImageSource.value);
     renderCard({name: inputPlace.value, link:inputImageSource.value});
     closePopup2();
     }

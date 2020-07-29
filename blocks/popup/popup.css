@@ -3,6 +3,9 @@
 @import url(./__header/popup__header.css);
 @import url(./__text/popup__text.css);
 @import url(./__submit-btn/popup__submit-btn.css);
+@import url(./__image/popup__image.css);
+@import url(./__title/popup__title.css);
+
 
 
 .popup {
@@ -17,5 +20,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 1s ease-out ;
 }
+

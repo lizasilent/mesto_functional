@@ -134,24 +134,22 @@ function handleDeleteClick() {
 // Картинка 
 
 let imageModal = document.querySelector(".popup_type_grid-img");
-let popupImage = imageModal.querySelector(".popup__image");
-let popupTitle = imageModal.querySelector(".popup__title");
+let imageModalSrc = imageModal.querySelector(".popup__image");
+let imageModalTitle = imageModal.querySelector(".popup__title");
 document.querySelector('.template-card').content.querySelector('.grid__item');
 let gridImage = document.querySelector(".grid__image");
 let closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 
 
 
-function handleImageOpen() {
+function handleImageOpen(src, text) {
   imageModal.classList.toggle("popup_is-open");
-
-  popupTitle.textContent = data.name;
-  popupImage.style.backgroundImage = `url(${data.link})`;
+  imageModalSrc.src = src;
+  imageModalTitle.textContent = text; 
 }
 
 gridImage.addEventListener("click", handleImageOpen);
   
-
 
  function handleImageClose() {
   imageModal.classList.remove("popup_is-open");

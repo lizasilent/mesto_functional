@@ -1,27 +1,27 @@
 //Modals 
-let editProfileModal = document.querySelector(".popup_type_edit-profile");
-let addCardsModal = document.querySelector(".popup_type_add-cards");
-let imageModal = document.querySelector(".popup_type_grid-img");
-let popup = document.querySelector(".popup__container");
+const editProfileModal = document.querySelector(".popup_type_edit-profile");
+const addCardsModal = document.querySelector(".popup_type_add-cards");
+const imageModal = document.querySelector(".popup_type_grid-img");
+const popup = document.querySelector(".popup__container");
 
 //Data etc
-let userName = document.querySelector(".profile__name");
-let userInformation = document.querySelector(".profile__description");
-let inputName = editProfileModal.querySelector(".popup__text_name");
-let inputDescription = editProfileModal.querySelector(".popup__text_description");
-let inputPlace = addCardsModal.querySelector(".popup__text_place");
-let inputImageSource = addCardsModal.querySelector(".popup__source");
-let list = document.querySelector(".grid__template");
-let imageModalSrc = imageModal.querySelector(".popup__image");
-let imageModalTitle = imageModal.querySelector(".popup__title");
-let closeImageModalButton = imageModal.querySelector(".popup__close-btn");
+const userName = document.querySelector(".profile__name");
+const userInformation = document.querySelector(".profile__description");
+const inputName = editProfileModal.querySelector(".popup__text_name");
+const inputDescription = editProfileModal.querySelector(".popup__text_description");
+const inputPlace = addCardsModal.querySelector(".popup__text_place");
+const inputImageSource = addCardsModal.querySelector(".popup__source");
+const list = document.querySelector(".grid__template");
+const imageModalSrc = imageModal.querySelector(".popup__image");
+const imageModalTitle = imageModal.querySelector(".popup__title");
+const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 
 
 //Buttons
-let editProfileButton = document.querySelector(".profile__edit-btn");
-let closeEditProfileModalButton = editProfileModal.querySelector(".popup__close-btn");
-let addCardButton = document.querySelector('.profile__add-btn');
-let closeAddCardsModalModalButton = addCardsModal.querySelector(".popup__close-btn");
+const editProfileButton = document.querySelector(".profile__edit-btn");
+const closeEditProfileModalButton = editProfileModal.querySelector(".popup__close-btn");
+const addCardButton = document.querySelector('.profile__add-btn');
+const closeAddCardsModalModalButton = addCardsModal.querySelector(".popup__close-btn");
 
 
 function openPopup () {
@@ -141,9 +141,6 @@ function renderCard(data) {
 initialCards.forEach((data) => {
   renderCard(data);
 })
-
-
-// Картинка 
 
 
 

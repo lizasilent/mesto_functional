@@ -12,6 +12,7 @@
     width: 18px;
     cursor:pointer;
     outline: none;
+    z-index: 1;
 
   }
   

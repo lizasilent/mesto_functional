@@ -61,7 +61,7 @@
               minlength="2"
               maxlength="200">
               <span class="form-error" id="description-error"></span>
-              <button type="submit" class="popup__submit-btn">Сохранить</button>
+              <button type="submit" class="popup__submit-btn popup__submit-btn_disabled">Сохранить</button>
             </form>
           </div>
 
@@ -69,6 +69,7 @@
             <form class="popup__form" name="add-cards__form" action="#">
               <button class="popup__close-btn" type="button"></button>
               <p class="popup__header">Новое место</p>
+              
               <input type="text"
               name="image-title"
               id="image-title"
@@ -81,7 +82,7 @@
 
               <span class="form-error" id="image-title-error"></span>
 
-              <input type="text"
+              <input type="url"
                name="image-src"
                id="image-src"
                value=""
@@ -91,7 +92,7 @@
 
               <span class="form-error" id="image-src-error"></span>
 
-              <button type="submit" class="popup__submit-btn">Создать</button>
+              <button type="submit" class="popup__submit-btn popup__submit-btn_disabled">Создать</button>
             </form>
           </div>
 

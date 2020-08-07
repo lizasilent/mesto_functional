@@ -38,10 +38,29 @@
             <form class="popup__form" name="edit-profile__form" action="#">
               <button class="popup__close-btn" type="button"></button>
               <p class="popup__header">Редактировать профиль</p>
-              <input type="text" name="name" value="" class="popup__input popup__text popup__text_name" placeholder="Имя" required minlength="2" maxlength="40">
-              <span class="form-error" id=""></span>
-              <input type="text" name="description" value="" class="popup__input popup__text popup__text_description" placeholder="Описание" required minlength="2" maxlength="200">
-              <span class="form-error"></span>
+
+              <input type="text"
+               name="name"
+               id="name"
+               value=""
+               class="popup__input popup__text popup__text_name"
+               placeholder="Имя"
+               required
+               minlength="2"
+               maxlength="40">
+
+              <span class="form-error" id="text-error"></span>
+
+              <input type="text"
+              name="description"
+              id="description"
+              value=""
+              class="popup__input popup__text popup__text_description"
+              placeholder="Описание"
+              required
+              minlength="2"
+              maxlength="200">
+              <span class="form-error" id="description-error"></span>
               <button type="submit" class="popup__submit-btn">Сохранить</button>
             </form>
           </div>
@@ -50,10 +69,28 @@
             <form class="popup__form" name="add-cards__form" action="#">
               <button class="popup__close-btn" type="button"></button>
               <p class="popup__header">Новое место</p>
-              <input type="text" name="name" value="" class="popup__input popup__text popup__text_place" placeholder="Название" required minlength="1" maxlength="30">
-              <span class="form-error" id="text-error"></span>
-              <input type="text" name="description" value="" class=" popup__input popup__text popup__source" placeholder="Ссылка на картинку" required>
-              <span class="form-error" id="description-error"></span>
+              <input type="text"
+              name="image-title"
+              id="image-title"
+              value=""
+              class="popup__input popup__text popup__text_place"
+              placeholder="Название"
+              required
+              minlength="1"
+              maxlength="30">
+
+              <span class="form-error" id="image-title-error"></span>
+
+              <input type="text"
+               name="image-src"
+               id="image-src"
+               value=""
+               class=" popup__input popup__text popup__source"
+               placeholder="Ссылка на картинку"
+               required>
+
+              <span class="form-error" id="image-src-error"></span>
+
               <button type="submit" class="popup__submit-btn">Создать</button>
             </form>
           </div>

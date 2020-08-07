@@ -2,7 +2,7 @@
 const editProfileModal = document.querySelector(".popup_type_edit-profile");
 const addCardsModal = document.querySelector(".popup_type_add-cards");
 const imageModal = document.querySelector(".popup_type_grid-img");
-const popup = document.querySelector(".popup__container");
+const popup = document.querySelector(".popup__form");
 
 //Data etc
 const userName = document.querySelector(".profile__name");
@@ -58,6 +58,7 @@ editProfileButton.addEventListener("click", () => {
 closeEditProfileModalButton.addEventListener("click", () => {
   openPopup(editProfileModal);
 });
+
 
 addCardButton.addEventListener("click", () => {
   openPopup2(addCardsModal);
@@ -153,4 +154,6 @@ function renderCard(data) {
 initialCards.forEach((data) => {
   renderCard(data);
 });
+
+
 

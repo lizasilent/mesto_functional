@@ -1,4 +1,4 @@
-.popup__container {
+.popup__form {
   position:relative;
   background-color: white;
   display:flex;
@@ -11,13 +11,13 @@
   box-sizing: border-box;
 }
 
-.popup__container :nth-last-child(2) {
+.popup__form :nth-last-child(2) {
   margin-bottom:0;
 }
 
 @media screen and (max-width: 523px) {
 
-  .popup__container  {
+  .popup__form  {
     max-width: 282px;
     padding: 20px 30px 20px;
   }

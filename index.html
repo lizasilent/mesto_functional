@@ -28,28 +28,32 @@
 
             <section class="grid">
               <ul class="grid__template"></ul>
-              
+
             </section>
           </main>
           <footer class="footer">
             <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
           </footer>
           <div class="popup popup_type_edit-profile">
-            <form class="popup__container" name="edit-profile__form" action="#">
+            <form class="popup__form" name="edit-profile__form" action="#">
               <button class="popup__close-btn" type="button"></button>
               <p class="popup__header">Редактировать профиль</p>
-              <input type="text" name="name" value="" class="popup__text popup__text_name" placeholder="Имя">
-              <input type="text" name="description" value="" class="popup__text popup__text_description" placeholder="Описание">
+              <input type="text" name="name" value="" class="popup__input popup__text popup__text_name" placeholder="Имя" required minlength="2" maxlength="40">
+              <span class="form-error" id=""></span>
+              <input type="text" name="description" value="" class="popup__input popup__text popup__text_description" placeholder="Описание" required minlength="2" maxlength="200">
+              <span class="form-error"></span>
               <button type="submit" class="popup__submit-btn">Сохранить</button>
             </form>
           </div>
 
           <div class="popup popup_type_add-cards">
-            <form class="popup__container" name="add-cards__form" action="#">
+            <form class="popup__form" name="add-cards__form" action="#">
               <button class="popup__close-btn" type="button"></button>
               <p class="popup__header">Новое место</p>
-              <input type="text" name="name" value="" class="popup__text popup__text_place" placeholder="Название">
-              <input type="text" name="description" value="" class="popup__text popup__source" placeholder="Ссылка на картинку">
+              <input type="text" name="name" value="" class="popup__input popup__text popup__text_place" placeholder="Название" required minlength="1" maxlength="30">
+              <span class="form-error" id="text-error"></span>
+              <input type="text" name="description" value="" class=" popup__input popup__text popup__source" placeholder="Ссылка на картинку" required>
+              <span class="form-error" id="description-error"></span>
               <button type="submit" class="popup__submit-btn">Создать</button>
             </form>
           </div>
@@ -60,7 +64,7 @@
               <img class="popup__image" src="" alt="">
               <h2 class="popup__title"></h2>
             </div>
-            
+
           </div>
 
         </div>
@@ -75,11 +79,12 @@
             <button class="grid__like-btn" type="button"></button>
           </div>
         </li>
-    
+
       </template>
 
-  <script src="./script.js"></script>
   <script src="./validation.js"></script>
+  <script src="./script.js"></script>
+
 </body>
 </html>
 

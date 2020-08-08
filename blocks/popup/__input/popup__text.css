@@ -1,7 +1,8 @@
 @import url(./_name/popup__text_name.css);
 @import url(./_description/popup__text_description.css);
 
-.popup__text {
+.popup__input {
+  outline: none;
   border: 0;
   border-bottom: 1px solid gray;
   background-color: transparent;
@@ -13,3 +14,12 @@
   margin-bottom: 29px;
 }
 
+.popup__input:invalid {
+
+  border-bottom: 1px solid red;
+}
+
+.popup__input:valid {
+
+  border-bottom: 1px solid green;
+}

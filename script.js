@@ -16,7 +16,7 @@ const inputImageSource = addCardsModal.querySelector(".popup__source");
 const list = document.querySelector(".grid__template");
 const imageModalSrc = imageModal.querySelector(".popup__image");
 const imageModalTitle = imageModal.querySelector(".popup__title");
-const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
+
 
 //Buttons
 const editProfileButton = document.querySelector(".profile__edit-btn");
@@ -27,7 +27,7 @@ const addCardButton = document.querySelector(".profile__add-btn");
 const closeAddCardsModalModalButton = addCardsModal.querySelector(
   ".popup__close-btn"
 );
-
+const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 
 //Открываем и закрываем модалки
 function toggleModalWindow(modalWindow) {
@@ -55,6 +55,7 @@ function closeModalByOverlay(evt) {
 editProfileModal.addEventListener("click", closeModalByOverlay);
 addCardsModal.addEventListener("click", closeModalByOverlay);
 imageModal.addEventListener("click", closeModalByOverlay);
+
 
 
 //Сохраняем введенную информацию
@@ -86,6 +87,7 @@ addCardButton.addEventListener("click", () => {
 closeAddCardsModalModalButton.addEventListener("click", () => {
   toggleModalWindow(addCardsModal);
 });
+
 
 popup.addEventListener("submit", saveInfo);
 addCardsModal.addEventListener("submit", addCardSubmitHandler);
@@ -175,10 +177,3 @@ initialCards.forEach((data) => {
 });
 
 
-// // Дополнительные закрытия модалок
-
-// const closeModalEsc = (evt) => {
-//   if (evt.key === 'Escape') {
-//   closeModalWindow()
-//   }
-//   };

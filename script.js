@@ -28,44 +28,63 @@ const closeAddCardsModalModalButton = addCardsModal.querySelector(
   ".popup__close-btn"
 );
 
-function openPopup() {
-  editProfileModal.classList.toggle("popup_is-open");
+
+//Открываем и закрываем модалки
+function toggleModalWindow(modalWindow) {
+  if (!modalWindow.classList.contains("popup_is")){
   inputName.value = userName.textContent;
   inputDescription.value = userInformation.textContent;
+  }
+  modalWindow.classList.toggle("popup_is-open");
+  document.addEventListener('keydown', closeModalByEsc);
 }
 
-function openPopup2() {
-  addCardsModal.classList.toggle("popup_is-open");
+function closeModalByEsc(evt){
+  const popupIsOpen = document.querySelector(".popup_is-open");
+    if (evt.key === 'Escape') {
+      toggleModalWindow(popupIsOpen);
+    }
+  }
+
+function closeModalByOverlay(evt) {
+  if (!evt.target.closest('.popup__form')){
+    toggleModalWindow(evt.target.closest('.popup'));
+  } 
 }
 
+editProfileModal.addEventListener("click", closeModalByOverlay);
+addCardsModal.addEventListener("click", closeModalByOverlay);
+imageModal.addEventListener("click", closeModalByOverlay);
+
+
+//Сохраняем введенную информацию
 function saveInfo(event) {
   event.preventDefault();
   userName.textContent = inputName.value;
   userInformation.textContent = inputDescription.value;
-  openPopup();
+  toggleModalWindow(editProfileModal);
 }
 
 function addCardSubmitHandler(event) {
   event.preventDefault();
   renderCard({ name: inputPlace.value, link: inputImageSource.value });
-  openPopup2();
+  toggleModalWindow();
 }
 
+// Тыкаем на кнопки для модалки edit
 editProfileButton.addEventListener("click", () => {
-  openPopup(editProfileModal);
+  toggleModalWindow(editProfileModal);
 });
-
 closeEditProfileModalButton.addEventListener("click", () => {
-  openPopup(editProfileModal);
+  toggleModalWindow(editProfileModal);
 });
 
-
+// Тыкаем на кнопки для модалки addcard
 addCardButton.addEventListener("click", () => {
-  openPopup2(addCardsModal);
+  toggleModalWindow(addCardsModal);
 });
-
 closeAddCardsModalModalButton.addEventListener("click", () => {
-  openPopup2(addCardsModal);
+  toggleModalWindow(addCardsModal);
 });
 
 popup.addEventListener("submit", saveInfo);
@@ -156,3 +175,10 @@ initialCards.forEach((data) => {
 });
 
 
+// // Дополнительные закрытия модалок
+
+// const closeModalEsc = (evt) => {
+//   if (evt.key === 'Escape') {
+//   closeModalWindow()
+//   }
+//   };

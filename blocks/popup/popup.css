@@ -8,6 +8,7 @@
 @import url(./__title/popup__title.css);
 @import url(./__container-img/popup__container-img.css);
 @import url(./__error/popup__error.css);
+@import url(./__error/_is-active/popup__error_is-active.css);
 
 
 .popup {

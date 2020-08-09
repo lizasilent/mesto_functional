@@ -1,16 +1,16 @@
 const settings = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
-  submitButtonSelector: "popup__submit-btn",
+  submitButtonSelector: ".popup__submit-btn",
   inactiveButtonClass: "popup__submit-btn_disabled",
   inputErrorClass: "popup__input_invalid",
   errorClass: "popup__error_is-active" 
 };
-
+ 
 
 //показать ошибку
 const showInputError = (formElement, inputElement, inputErrorClass, errorClass) => {
-    const errorElement = formElement.querySelector(`#${inputElement.name}-error`)
+    const errorElement = formElement.querySelector(`#${inputElement.id}-error`)
     inputElement.classList.add(inputErrorClass);
     errorElement.textContent = inputElement.validationMessage;
     errorElement.classList.add(errorClass);
@@ -18,7 +18,7 @@ const showInputError = (formElement, inputElement, inputErrorClass, errorClass) 
 
 //скрыть ошибку
   const hideInputError = (formElement, inputElement, inputErrorClass, errorClass) => {
-    const errorElement = formElement.querySelector(`#${inputElement.name}-error`);
+    const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.remove(inputErrorClass);
     errorElement.classList.remove(errorClass);
     errorElement.textContent = "";

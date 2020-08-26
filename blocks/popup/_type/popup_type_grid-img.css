@@ -1,0 +1,9 @@
+.popup_type_grid-img .popup__form {
+    box-sizing: border-box;
+    display: flex;
+    max-width: 75vh;
+    max-height: 75vh;
+    background: none;
+    padding: 0;
+
+}

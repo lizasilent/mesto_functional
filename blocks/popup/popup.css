@@ -1,3 +1,4 @@
+
 @import url(./__form/popup__form.css);
 @import url(./__close-btn/popup__close-btn.css);
 @import url(./__header/popup__header.css);
@@ -6,9 +7,9 @@
 @import url(./__submit-btn/_disabled/popup__submit-btn_disabled.css);
 @import url(./__image/popup__image.css);
 @import url(./__title/popup__title.css);
-@import url(./__container-img/popup__container-img.css);
 @import url(./__error/popup__error.css);
 @import url(./__error/_is-active/popup__error_is-active.css);
+@import url(./_type/popup_type_grid-img.css);
 
 
 .popup {

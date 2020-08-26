@@ -6,7 +6,7 @@
   justify-content: center;
   padding: 34px 36px 36px;
   margin:0 auto;
-  width: 430px;
+  min-width: 430px;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -18,7 +18,8 @@
 @media screen and (max-width: 523px) {
 
   .popup__form  {
-    max-width: 282px;
+    min-width: 282px;
     padding: 20px 30px 20px;
+    box-sizing: border-box;
   }
 }

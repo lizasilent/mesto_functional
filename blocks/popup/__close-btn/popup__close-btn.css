@@ -20,12 +20,17 @@
 
 @media screen and (max-width: 523px) {
   .popup__close-btn {
-    min-height: 20px;
-    min-width: 20px;
-    top:-30px;
-    right: -20px;
-  }
+    min-height: 30px;
+    min-width: 30px;
   
+  }
 
+}
+
+@media screen and (max-width: 385px) {
+  .popup__close-btn {
+   top:-40px;
+  right: -20px;
+  }
 
 }

@@ -16,6 +16,7 @@ const inputImageSource = addCardsModal.querySelector(".popup__source");
 const list = document.querySelector(".grid__template");
 const imageModalSrc = imageModal.querySelector(".popup__image");
 const imageModalTitle = imageModal.querySelector(".popup__title");
+const addCardsForm = addCardsModal.querySelector(".popup__form_add-cards");
 
 
 //Buttons
@@ -30,25 +31,25 @@ const closeAddCardsModalModalButton = addCardsModal.querySelector(
 const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 
 //Открываем и закрываем модалки
-function toggleModalWindow(modalWindow) {
-  if (!modalWindow.classList.contains("popup_is")){
-  inputName.value = userName.textContent;
-  inputDescription.value = userInformation.textContent;
-  }
-  modalWindow.classList.toggle("popup_is-open");
+function openModalWindow(modalWindow) {
+  modalWindow.classList.add("popup_is-open");
   document.addEventListener('keydown', closeModalByEsc);
+}
+
+function closeModalWindow(modalWindow) {
+  modalWindow.classList.remove("popup_is-open");
 }
 
 function closeModalByEsc(evt){
   const popupIsOpen = document.querySelector(".popup_is-open");
     if (evt.key === 'Escape') {
-      toggleModalWindow(popupIsOpen);
+      closeModalWindow(popupIsOpen);
     }
   }
 
 function closeModalByOverlay(evt) {
   if (!evt.target.closest('.popup__form')){
-    toggleModalWindow(evt.target.closest('.popup'));
+    closeModalWindow(evt.target.closest('.popup'));
   } 
 }
 
@@ -57,35 +58,41 @@ addCardsModal.addEventListener("click", closeModalByOverlay);
 imageModal.addEventListener("click", closeModalByOverlay);
 
 
-
 //Сохраняем введенную информацию
+
+inputName.value = userName.textContent;
+inputDescription.value = userInformation.textContent;
+
+
 function saveInfo(event) {
   event.preventDefault();
   userName.textContent = inputName.value;
   userInformation.textContent = inputDescription.value;
-  toggleModalWindow(editProfileModal);
+  closeModalWindow(editProfileModal);
 }
 
 function addCardSubmitHandler(event) {
   event.preventDefault();
   renderCard({ name: inputPlace.value, link: inputImageSource.value });
-  toggleModalWindow();
+  closeModalWindow(addCardsModal);
+  addCardsForm.reset();
+
 }
 
 // Тыкаем на кнопки для модалки edit
 editProfileButton.addEventListener("click", () => {
-  toggleModalWindow(editProfileModal);
+  openModalWindow(editProfileModal);
 });
 closeEditProfileModalButton.addEventListener("click", () => {
-  toggleModalWindow(editProfileModal);
+  closeModalWindow(editProfileModal);
 });
 
 // Тыкаем на кнопки для модалки addcard
 addCardButton.addEventListener("click", () => {
-  toggleModalWindow(addCardsModal);
+  openModalWindow(addCardsModal);
 });
 closeAddCardsModalModalButton.addEventListener("click", () => {
-  toggleModalWindow(addCardsModal);
+  closeModalWindow(addCardsModal);
 });
 
 

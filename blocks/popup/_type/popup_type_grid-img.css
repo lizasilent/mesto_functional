@@ -20,7 +20,7 @@
         right: -40px;
         min-height: 30px;
         min-width: 30px;
-
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -29,5 +29,5 @@
         top:-40px;
         right: -25px;
         
-
+    }
 }

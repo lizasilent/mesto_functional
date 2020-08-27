@@ -18,7 +18,6 @@ const imageModalSrc = imageModal.querySelector(".popup__image");
 const imageModalTitle = imageModal.querySelector(".popup__title");
 const addCardsForm = addCardsModal.querySelector(".popup__form_add-cards");
 
-
 //Buttons
 const editProfileButton = document.querySelector(".profile__edit-btn");
 const closeEditProfileModalButton = editProfileModal.querySelector(
@@ -33,36 +32,34 @@ const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 //Открываем и закрываем модалки
 function openModalWindow(modalWindow) {
   modalWindow.classList.add("popup_is-open");
-  document.addEventListener('keydown', closeModalByEsc);
+  document.addEventListener("keydown", closeModalByEsc);
 }
 
 function closeModalWindow(modalWindow) {
   modalWindow.classList.remove("popup_is-open");
 }
 
-function closeModalByEsc(evt){
+function closeModalByEsc(evt) {
   const popupIsOpen = document.querySelector(".popup_is-open");
-    if (evt.key === 'Escape') {
-      closeModalWindow(popupIsOpen);
-    }
+  if (evt.key === "Escape") {
+    closeModalWindow(popupIsOpen);
   }
+}
 
 function closeModalByOverlay(evt) {
-  if (!evt.target.closest('.popup__form')){
-    closeModalWindow(evt.target.closest('.popup'));
-  } 
+  if (!evt.target.closest(".popup__form")) {
+    closeModalWindow(evt.target.closest(".popup"));
+  }
 }
 
 editProfileModal.addEventListener("click", closeModalByOverlay);
 addCardsModal.addEventListener("click", closeModalByOverlay);
 imageModal.addEventListener("click", closeModalByOverlay);
 
-
 //Сохраняем введенную информацию
 
 inputName.value = userName.textContent;
 inputDescription.value = userInformation.textContent;
-
 
 function saveInfo(event) {
   event.preventDefault();
@@ -76,7 +73,6 @@ function addCardSubmitHandler(event) {
   renderCard({ name: inputPlace.value, link: inputImageSource.value });
   closeModalWindow(addCardsModal);
   addCardsForm.reset();
-
 }
 
 // Тыкаем на кнопки для модалки edit
@@ -94,7 +90,6 @@ addCardButton.addEventListener("click", () => {
 closeAddCardsModalModalButton.addEventListener("click", () => {
   closeModalWindow(addCardsModal);
 });
-
 
 popup.addEventListener("submit", saveInfo);
 addCardsModal.addEventListener("submit", addCardSubmitHandler);
@@ -182,5 +177,3 @@ function renderCard(data) {
 initialCards.forEach((data) => {
   renderCard(data);
 });
-
-

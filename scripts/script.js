@@ -32,11 +32,12 @@ const closeImageModalButton = imageModal.querySelector(".popup__close-btn");
 //Открываем и закрываем модалки
 function openModalWindow(modalWindow) {
   modalWindow.classList.add("popup_is-open");
-  document.addEventListener("keydown", closeModalByEsc);
+  document.addEventListener("keydown", closeModalByEsc); 
 }
 
 function closeModalWindow(modalWindow) {
   modalWindow.classList.remove("popup_is-open");
+  document.removeEventListener("keydown", closeModalByEsc);
 }
 
 function closeModalByEsc(evt) {
@@ -60,6 +61,7 @@ imageModal.addEventListener("click", closeModalByOverlay);
 
 inputName.value = userName.textContent;
 inputDescription.value = userInformation.textContent;
+
 
 function saveInfo(event) {
   event.preventDefault();
@@ -139,10 +141,9 @@ function handleDeleteClick() {
   event.target.closest(".grid__item").remove();
 }
 
-function handleImageOpen(src, textcontent) {
-  imageModal.classList.toggle("popup_is-open");
+function createImageModal(src, textcontent) {
   imageModalSrc.src = src;
-  imageModalTitle.textContent = textcontent;
+  imageModalTitle.textContent = textcontent; 
 }
 
 function createCard(data) {
@@ -162,10 +163,14 @@ function createCard(data) {
     handleDeleteClick(gridDeleteButton);
   });
 
+
   gridImage.addEventListener("click", () => {
-    handleImageOpen(data.link, data.name);
+    openModalWindow(imageModal);
+    createImageModal(data.link, data.name);
   });
-  closeImageModalButton.addEventListener("click", handleImageOpen);
+  closeImageModalButton.addEventListener("click", () => {
+    closeModalWindow(imageModal);
+  });
 
   return gridElement;
 }
@@ -177,3 +182,4 @@ function renderCard(data) {
 initialCards.forEach((data) => {
   renderCard(data);
 });
+

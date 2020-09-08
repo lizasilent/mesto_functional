@@ -1,6 +1,6 @@
 Проект "Место"
 ------
-Ссылка на проект: [https://lizasilent.github.io/mesto/]
+Ссылка на проект: [https://lizasilent.github.io/mesto_functional/]
 
 Сайт-галерея для сохранения фотографий
 
